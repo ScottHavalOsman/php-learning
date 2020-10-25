@@ -7,9 +7,15 @@
   <body>
 
     <?php
-    $age = 12;
-    $can_vote = ($age >= 18) ? "Can Vote" : "Can't Vote";
-    echo "Vote : $can_vote<br>";
+    $rand_str = "    Random String      ";
+    printf("Length: %d<br>", strlen($rand_str));
+    printf("Length: %d<br>", strlen(ltrim($rand_str)));
+    printf("Length: %d<br>", strlen(rtrim($rand_str)));
+    printf("Length: %d<br>", strlen(trim($rand_str)));
+
+    $rand_str = trim($rand_str);
+    printf("Upper: %s<br>", strtoupper($rand_str));
+    printf("Lower: %s<br>", strtolower($rand_str));
      ?>
 
   </body>
