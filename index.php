@@ -7,19 +7,27 @@
   <body>
 
     <?php
-    function addNumbers($num_1 = 0, $num_2 = 0) {
-      return $num_1 + $num_2;
+    function getSum(...$nums) {
+      $sum = 0;
+      foreach ($nums as $num) {
+        $sum += $num;
+      }
+      return $sum;
     }
 
-    printf("5 + 4 = %d<br>", addNumbers(5, 4));
+    printf("Sum = %d<br>", getSum(1, 2, 3, 4));
 
-    function changeMe(&$change) {
-      $change = 10;
+    function doMath($x, $y) {
+      return array(
+        $x + $y,
+        $x - $y
+      );
     }
 
-    $change = 5;
-    changeMe($change);
-    echo "Change : $change<br>";
+    list($sum, $difference) = doMath(5, 4);
+    echo "Sum = $sum<br>";
+    echo "Difference = $difference<br>";
+
      ?>
 
   </body>
