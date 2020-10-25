@@ -7,24 +7,19 @@
   <body>
 
     <?php
-    $i = 0;
+    function addNumbers($num_1 = 0, $num_2 = 0) {
+      return $num_1 + $num_2;
+    }
 
-    while ($i < 10) {
-      echo ++$i . ', ';
+    printf("5 + 4 = %d<br>", addNumbers(5, 4));
+
+    function changeMe(&$change) {
+      $change = 10;
     }
-    echo '<br>';
-    for ($i = 0; $i < 10; $i++) {
-      if(($i % 2) == 0) {
-        continue;
-      }
-      if($i == 7) break;
-      echo $i . ', ';
-    }
-    echo '<br>';
-    $i = 0;
-    do{
-      echo "Do While : $i<br>";
-    } while($i > 0);
+
+    $change = 5;
+    changeMe($change);
+    echo "Change : $change<br>";
      ?>
 
   </body>
