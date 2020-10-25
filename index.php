@@ -7,19 +7,9 @@
   <body>
 
     <?php
-    $request = "Coke";
-
-    switch($request) {
-      case "Coke":
-      echo "Here is your Coke";
-      break;
-      case "Pepsi":
-      echo "Here is your Pepsi";
-      break;
-      default:
-      echo "Here is your water";
-      break;
-    }
+    $age = 12;
+    $can_vote = ($age >= 18) ? "Can Vote" : "Can't Vote";
+    echo "Vote : $can_vote<br>";
      ?>
 
   </body>
