@@ -7,15 +7,18 @@
   <body>
 
     <?php
-    $num_oranges = 4;
-    $num_bananas = 30;
+    $request = "Coke";
 
-    if (($num_oranges > 4) && ($num_bananas > 30)) {
-      echo "25% Discount <br>";
-    } elseif (($num_oranges > 3) && ($num_bananas > 25)) {
-      echo "15% Discount <br>";
-    } else {
-      echo "No Discount";
+    switch($request) {
+      case "Coke":
+      echo "Here is your Coke";
+      break;
+      case "Pepsi":
+      echo "Here is your Pepsi";
+      break;
+      default:
+      echo "Here is your water";
+      break;
     }
      ?>
 
