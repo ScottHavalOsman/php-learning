@@ -7,17 +7,18 @@
   <body>
 
     <?php
-    $rand_str = "    Random String      ";
-    printf("Length: %d<br>", strlen($rand_str));
-    printf("Length: %d<br>", strlen(ltrim($rand_str)));
-    printf("Length: %d<br>", strlen(rtrim($rand_str)));
-    printf("Length: %d<br>", strlen(trim($rand_str)));
+    $friends = array("John", "Lucy", "Ivy");
+    echo 'Partner : ' . $friends[0] . '<br>';
+    $friends[3] = 'Steve';
+    foreach ($friends as $f) {
+      printf("Friend : %s<br>", $f);
+    }
 
-    $rand_str = trim($rand_str);
-    printf("Upper: %s<br>", strtoupper($rand_str));
-    printf("Lower: %s<br>", strtolower($rand_str));
-    printf("Upper First Character: %s<br>", ucfirst($rand_str));
-    printf("1st 6 Characters : %s<br>", substr($rand_str, 0, 6));
+    $me_info = array('Name' => 'Derek', 'Street' => '123 Main Street');
+
+    foreach ($me_info as $k => $v) {
+      printf("%s : %s<br>", $k, $v);
+    }
 
      ?>
 
